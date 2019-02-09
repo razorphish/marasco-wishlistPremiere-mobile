@@ -1,0 +1,8 @@
+{
+  "name": "marasco-wishlistPremiere-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "b7f58752"
+}
