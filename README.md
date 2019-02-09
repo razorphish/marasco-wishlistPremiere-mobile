@@ -18,6 +18,9 @@ COMMANDS TO START PROJECT
 ==================================
 ionic start ionic-v4-test --capacitor --type=angular
 ng add @angular/pwa --project app
+npm install http-server -g
+http-server -p 8080 -c-1 www
+
 
 
 Logo Generator 
