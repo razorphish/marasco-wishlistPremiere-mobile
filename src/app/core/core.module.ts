@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { StoreModule } from '@ngrx/store';
-import { environment } from '../../../../environments/environment';
+import { environment } from '../../environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { IonicStorageModule } from '@ionic/storage';
 import { EffectsModule } from '@ngrx/effects';
@@ -11,9 +11,8 @@ import { AppEffects } from './app.effects';
 import * as fromStore from './store';
 import { AuthGuard } from './guards/auth.guard';
 
-import { services, AuthTokenFactory, AuthTokenService, TokenInterceptor } from '@app/features/marasco/core/services'
+import { services, AuthTokenFactory, AuthTokenService, TokenInterceptor } from '../../app/core/services';
 import { throwIfAlreadyLoaded } from './guards/module-import.guard';
-
 
 @NgModule({
   imports: [

@@ -1,6 +1,8 @@
 export const environment = {
   production: true,
 
+  debug: false,
+
   serviceWorkerOptions : {
     vap: {
       publicKey: 'BDCIWOBrQvMpw0lY7p87qO-HkSxGAunOAj9sInXZCJ42GRrj1nmd7zUyFdfaoOPolKJfvHIvzfyv0D25uWh0ydQ',

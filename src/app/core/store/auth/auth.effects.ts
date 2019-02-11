@@ -12,8 +12,8 @@ import * as actions from './auth.actions';
 import { TokenResult } from '../../models/tokenResult.model';
 import { environment } from '../../../../environments/environment';
 
-import { AuthService as SocialAuthService, SocialUser } from 'angularx-social-login';
-import { FacebookLoginProvider, GoogleLoginProvider, LinkedInLoginProvider } from 'angularx-social-login';
+// import { AuthService as SocialAuthService, SocialUser } from 'angularx-social-login';
+// import { FacebookLoginProvider, GoogleLoginProvider, LinkedInLoginProvider } from 'angularx-social-login';
 import { NotificationService } from '../../services/notification.service';
 import { _daysInMonth } from 'ngx-bootstrap/chronos/utils/date-getters';
 
@@ -124,61 +124,61 @@ export class AuthEffects {
         })
     );
 
-    @Effect({ dispatch: false })
-    googleSign$ = this.actions$.pipe(
-        ofType(actions.AuthActionTypes.GoogleSign),
-        tap((data: any) => {
-            this.authService.signIn(GoogleLoginProvider.PROVIDER_ID)
-                .then((socialUser: SocialUser) => {
-                    this.auth
-                        .loginSocial(socialUser)
-                        // tslint:disable-next-line:no-unused-expression
-                        .subscribe((_: TokenResult) => { _; },
-                            (error: any) => { this.dispatchError(error); });
-                })
-                .catch((error: any) => {
-                    this.dispatchError(error);
-                });
-        })
-    );
+    // @Effect({ dispatch: false })
+    // googleSign$ = this.actions$.pipe(
+    //     ofType(actions.AuthActionTypes.GoogleSign),
+    //     tap((data: any) => {
+    //         this.authService.signIn(GoogleLoginProvider.PROVIDER_ID)
+    //             .then((socialUser: SocialUser) => {
+    //                 this.auth
+    //                     .loginSocial(socialUser)
+    //                     // tslint:disable-next-line:no-unused-expression
+    //                     .subscribe((_: TokenResult) => { _; },
+    //                         (error: any) => { this.dispatchError(error); });
+    //             })
+    //             .catch((error: any) => {
+    //                 this.dispatchError(error);
+    //             });
+    //     })
+    // );
 
-    @Effect({ dispatch: false })
-    facebookSign$ = this.actions$.pipe(
-        ofType(actions.AuthActionTypes.FacebookSign),
-        tap((data: any) => {
+    // @Effect({ dispatch: false })
+    // facebookSign$ = this.actions$.pipe(
+    //     ofType(actions.AuthActionTypes.FacebookSign),
+    //     tap((data: any) => {
 
-            this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
-                .then((socialUser: SocialUser) => {
-                    this.auth
-                        .loginSocial(socialUser)
-                        // tslint:disable-next-line:no-unused-expression
-                        .subscribe((_: TokenResult) => { _; },
-                            (error: any) => { this.dispatchError(error); });
-                })
-                .catch((error: any) => {
-                    this.dispatchError(error);
-                });
-        })
-    );
+    //         this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
+    //             .then((socialUser: SocialUser) => {
+    //                 this.auth
+    //                     .loginSocial(socialUser)
+    //                     // tslint:disable-next-line:no-unused-expression
+    //                     .subscribe((_: TokenResult) => { _; },
+    //                         (error: any) => { this.dispatchError(error); });
+    //             })
+    //             .catch((error: any) => {
+    //                 this.dispatchError(error);
+    //             });
+    //     })
+    // );
 
-    @Effect({ dispatch: false })
-    linkedInSign$ = this.actions$.pipe(
-        ofType(actions.AuthActionTypes.LinkedInSign),
-        tap((data: any) => {
+    // @Effect({ dispatch: false })
+    // linkedInSign$ = this.actions$.pipe(
+    //     ofType(actions.AuthActionTypes.LinkedInSign),
+    //     tap((data: any) => {
 
-            this.authService.signIn(LinkedInLoginProvider.PROVIDER_ID)
-                .then((socialUser: SocialUser) => {
-                    this.auth
-                        .loginSocial(socialUser)
-                        // tslint:disable-next-line:no-unused-expression
-                        .subscribe((_: TokenResult) => { _; },
-                            (error: any) => { this.dispatchError(error); });
-                })
-                .catch((error: any) => {
-                    this.dispatchError(error);
-                });
-        })
-    );
+    //         this.authService.signIn(LinkedInLoginProvider.PROVIDER_ID)
+    //             .then((socialUser: SocialUser) => {
+    //                 this.auth
+    //                     .loginSocial(socialUser)
+    //                     // tslint:disable-next-line:no-unused-expression
+    //                     .subscribe((_: TokenResult) => { _; },
+    //                         (error: any) => { this.dispatchError(error); });
+    //             })
+    //             .catch((error: any) => {
+    //                 this.dispatchError(error);
+    //             });
+    //     })
+    // );
 
     @Effect({ dispatch: false })
     loginRedirect$ = this.actions$.pipe(
@@ -268,7 +268,7 @@ export class AuthEffects {
         private auth: AuthService,
         private router: Router,
         private route: ActivatedRoute,
-        private authService: SocialAuthService,
+        // private authService: SocialAuthService,
         private _notificationService: NotificationService
     ) {
 

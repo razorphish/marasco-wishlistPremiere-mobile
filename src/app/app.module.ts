@@ -13,10 +13,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule, SwUpdate, SwPush } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import { CoreModule } from './core/core.module';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    CoreModule,
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,

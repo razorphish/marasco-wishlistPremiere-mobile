@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { WishlistPage } from './wishlist.page';
 
+
 @NgModule({
   declarations: [WishlistPage],
   imports: [
@@ -18,6 +19,9 @@ import { WishlistPage } from './wishlist.page';
         component: WishlistPage
       }
     ])
+  ],
+  providers: [
+
   ]
 })
 export class WishlistPageModule { }
