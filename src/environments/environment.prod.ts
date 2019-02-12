@@ -11,8 +11,8 @@ export const environment = {
   },
 
   log: {
-    auth: true,
-    store: true,
+    auth: false,
+    store: false,
   },
 
   marasco: {

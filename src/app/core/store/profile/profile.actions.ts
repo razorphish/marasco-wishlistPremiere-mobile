@@ -1,10 +1,10 @@
-import { Action } from "@ngrx/store";
+import { Action } from '@ngrx/store';
 
 export enum ProfileActionTypes {
-  ProfileUpdate = "[Profile] Update Action",
-  ProfileUpdateSuccess = "[Profile API] Update Action Success",
-  ProfileUpdateFailure = "[Profile API] Update Action Failure",
-  ProfileRestore = "[Profile] Restore Action"
+  ProfileUpdate = '[Profile] Update Action',
+  ProfileUpdateSuccess = '[Profile API] Update Action Success',
+  ProfileUpdateFailure = '[Profile API] Update Action Failure',
+  ProfileRestore = '[Profile] Restore Action'
 }
 
 export class ProfileUpdate implements Action {
