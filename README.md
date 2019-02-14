@@ -1,5 +1,5 @@
-ynpx cap open ios
-npx cap open android
+npx cap add ios
+npx cap add android
 
 npx cap open ios
 npx cap open android

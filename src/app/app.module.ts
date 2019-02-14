@@ -36,7 +36,6 @@ import { CoreModule } from './core/core.module';
 })
 export class AppModule {
   constructor(swUpdate: SwUpdate, swPush: SwPush, snackbar: MatSnackBar) {
-    console.log('App Module');
     swUpdate.available.subscribe((update) => {
       console.log('update available', update);
 

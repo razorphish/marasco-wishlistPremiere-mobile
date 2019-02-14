@@ -1,3 +1,4 @@
+import { AuthHttpService } from './../../core/services/auth-http.service';
 import { environment } from './../../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Response } from '@angular/http';
@@ -13,7 +14,7 @@ export class WishlistService {
 
     private _url: string = environment.apiUrl + 'user/';
 
-    constructor(private _authHttp: any) {
+    constructor(private _authHttp: AuthHttpService) {
     }
 
     all(): Observable<WishlistModel[]> {
