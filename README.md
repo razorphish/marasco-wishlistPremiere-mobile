@@ -1,5 +1,6 @@
 npx cap add ios
 npx cap add android
+npx cap add electron
 
 npx cap open ios
 npx cap open android
