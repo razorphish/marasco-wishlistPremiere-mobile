@@ -12,17 +12,20 @@ import { environment } from '../../../environments/environment';
 import * as auth from './auth';
 import * as notify from './notify';
 import * as profile from './profile';
+import * as menu from './menu';
 
 export interface AppState {
     auth: auth.AuthState;
     notify: notify.NotifyState;
     profile: profile.ProfileState;
+    menu: menu.MenuState;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
     auth: auth.authReducer,
     notify: notify.notifyReducer,
-    profile: profile.profileReducer
+    profile: profile.profileReducer,
+    menu: menu.menuReducer
 };
 
 // console.log all actions
@@ -50,7 +53,8 @@ export const metaReducers: MetaReducer<AppState>[] = !environment.production
 export const effects = [
     auth.AuthEffects,
     notify.NotifyEffects,
-    profile.ProfileEffects
+    profile.ProfileEffects,
+    menu.MenuEffects
 ];
 
 export const services = [notify.NotifyService];

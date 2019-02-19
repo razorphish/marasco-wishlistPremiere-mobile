@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 declare var $: any;
 
@@ -9,15 +9,15 @@ export class NotificationService {
   }
 
   smallBox(data, cb?) {
-    $.smallBox(data, cb)
+    $.smallBox(data, cb);
   }
 
   bigBox(data, cb?) {
-    $.bigBox(data, cb)
+    $.bigBox(data, cb);
   }
 
   smartMessageBox(data, cb?) {
-    $.SmartMessageBox(data, cb)
+    $.SmartMessageBox(data, cb);
   }
 
 }

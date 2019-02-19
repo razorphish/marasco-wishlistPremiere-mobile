@@ -8,12 +8,14 @@ npx cap open android
 
 ngx cap copy - after every build
 
-ngx cap update - updates plugins : run after new plugin installation
+npx cap update - updates plugins : run after new plugin installation
 
-ngx cap sync - does both update plugins and copy
+npx cap sync - does both update plugins and copy
 
 npm install your-cordova-plugin
 npx cap update
+
+npm i electron-packager -g
 
 COMMANDS TO START PROJECT
 ==================================

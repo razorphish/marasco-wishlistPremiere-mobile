@@ -11,7 +11,15 @@ import { AppEffects } from './app.effects';
 import * as fromStore from './store';
 import { AuthGuard } from './guards/auth.guard';
 
-import { services, AuthTokenFactory, AuthTokenService, TokenInterceptor } from '../../app/core/services';
+import {
+  services,
+  AuthTokenFactory,
+  AuthTokenService,
+  TokenInterceptor,
+  MenuFactory,
+  MenuService
+} from '../../app/core/services';
+
 import { throwIfAlreadyLoaded } from './guards/module-import.guard';
 
 @NgModule({
@@ -38,6 +46,13 @@ import { throwIfAlreadyLoaded } from './guards/module-import.guard';
       provide: APP_INITIALIZER,
       useFactory: AuthTokenFactory,
       deps: [AuthTokenService],
+      multi: true
+    },
+
+    {
+      provide: APP_INITIALIZER,
+      useFactory: MenuFactory,
+      deps: [MenuService],
       multi: true
     },
 
