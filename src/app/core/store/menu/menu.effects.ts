@@ -12,6 +12,7 @@ import * as actions from './menu.actions';
 import { NotificationService } from '../../services/notification.service';
 import { _daysInMonth } from 'ngx-bootstrap/chronos/utils/date-getters';
 import { MenuModel } from '../../models/menu.model';
+import { MenuItemService } from '../../services/menuItem.service';
 
 
 @Injectable()
@@ -49,7 +50,7 @@ export class MenuEffects {
     menu$ = this.actions$.pipe(
         ofType(actions.MenuActionTypes.MenuChange),
         // tap((data: any) => console.log('Whatup!!')),
-        tap((data: any) => console.log('what', data)),
+        // tap((data: any) => console.log('what', data)),
         switchMap((data: any) => data.payload.menu),
         tap<MenuModel>(_ => (this.menuService.menu = _)),
         map(_ => new actions.MenuPayload(_))
@@ -107,13 +108,14 @@ export class MenuEffects {
         private actions$: Actions,
         private store: Store<MenuState>,
         private menuService: MenuService,
+        private _menuItemService: MenuItemService,
         private router: Router,
         private route: ActivatedRoute,
         private _notificationService: NotificationService
     ) {
 
         // On menu item list changed
-        this.menuService.menu$.subscribe(menu => {
+        this._menuItemService.onMenuStateChanged.subscribe(menu => {
             if (menu) {
                 this.store.dispatch(new actions.MenuChange(menu));
             } else {

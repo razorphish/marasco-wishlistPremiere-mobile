@@ -1,4 +1,3 @@
-
 import { StorageService } from './storage.service';
 import {
     AuthTokenFactory,
@@ -10,6 +9,7 @@ import { TokenInterceptor } from './token.interceptor';
 import { AuthHttpService } from './auth-http.service';
 import { NotificationService } from './notification.service';
 import { MenuService, MenuFactory } from './menu.service';
+import { MenuItemService } from './menuItem.service';
 
 export const services = [
     StorageService,
@@ -19,6 +19,7 @@ export const services = [
     AuthHttpService,
     MenuService,
     NotificationService,
+    MenuItemService
 ];
 
 export * from './storage.service';
@@ -28,3 +29,4 @@ export * from './auth-http.service';
 export * from './token.interceptor';
 export * from './notification.service';
 export * from './menu.service';
+export * from './menuItem.service';

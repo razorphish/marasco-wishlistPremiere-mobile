@@ -2,7 +2,7 @@ import { Action } from '@ngrx/store';
 
 export enum MenuActionTypes {
   MenuInit = '[Menu] Init',
-  NullMenu = '[Menu] Null Token',
+  NullMenu = '[Menu] Null Menu',
   MenuItemCreateAction = '[Menu] Item Create Action',
   MenuItemCreateSuccess = '[Menu] Item Create Success',
   MenuItemDeleteAction = '[Menu] Item Delete Action',

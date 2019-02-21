@@ -17,7 +17,8 @@ import {
   AuthTokenService,
   TokenInterceptor,
   MenuFactory,
-  MenuService
+  MenuService,
+  MenuItemService
 } from '../../app/core/services';
 
 import { throwIfAlreadyLoaded } from './guards/module-import.guard';
